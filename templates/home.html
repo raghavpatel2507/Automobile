@@ -1,0 +1,25 @@
+<html>
+<body>
+    <div class="login">
+       <h1>mpg Prediction</h1>
+   
+        <!-- Main Input For Receiving Query to our ML -->
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
+         <input type="text" name="cylinders" placeholder="cylinders" required="required" /><br>
+           <input type="text" name="displacement" placeholder="displacement" required="required" /><br>
+           <input type="text" name="horsepowers" placeholder="horsepower" required="required" /><br>
+           <input type="text" name="weight" placeholder="weight" required="required" /><br>
+           <input type="text" name="acceleration" placeholder="acceleration" required="required" /><br>
+           <input type="text" name="model_year" placeholder="model_year" required="required" /><br>
+           <input type="text" name="origin1" placeholder="origin1" required="required" /><br>
+           
+   
+   
+   
+           <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+       </form>
+    <h2>
+       THE mpg prediction is {{result}}
+    </h2>
+   <body>
+</html>
